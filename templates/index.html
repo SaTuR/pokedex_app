@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='pokeball.png') }}">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- Titulo de la Pagina-->
+  <title>Pokedex by SaTuR Cordova</title>
+</head>
+
+<body>
+  <div class="container">
+    <img src="{{ url_for('static', filename='logo.png') }}" class="rounded mx-auto d-block" alt="logo.png"
+      style="width: 20rem;">
+
+    <br>
+    <div class="d-flex justify-content-center">
+      <form class="row mb-3">
+        <div class="col-auto">
+          <input type="text" class="form-control" id="pokemon_name" placeholder="Pokemon">
+        </div>
+        <div class="col-auto">
+          <button type="submit" class="btn btn-primary mb-3">Buscar</button>
+        </div>
+      </form>
+    </div>
+    <div class="d-flex justify-content-center">
+      <div class="card shadow-lg" style="width: 18rem;">
+        <img src={{pokemon.sprite}} class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{pokemon.name.upper()}}</h5>
+          <div class="card-text">
+            <p>No. {{pokemon.order}}</p>
+            <p>Height {{pokemon.height}}</p>
+            <p>Weight. {{pokemon.weight}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="card shadow-lg" style="width: 18rem;">
+        <img src={{pokemon.sprite}} class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{pokemon.name.upper()}}</h5>
+          <div class="card-text">
+            <p>No. {{pokemon.order}}</p>
+            <p>Height {{pokemon.height}}</p>
+            <p>Weight. {{pokemon.weight}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
